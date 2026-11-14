@@ -2,6 +2,7 @@
 # Automatically generated file. DO NOT MODIFY
 #
 
+ifneq ($(wildcard vendor/xiaomi/pipa/radio/abl.img),)
 AB_OTA_PARTITIONS += \
     abl \
     aop \
@@ -20,3 +21,4 @@ AB_OTA_PARTITIONS += \
     uefisecapp \
     xbl \
     xbl_config
+endif

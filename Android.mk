@@ -6,6 +6,7 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),pipa)
 
+ifneq ($(wildcard $(LOCAL_PATH)/radio/abl.img),)
 $(call add-radio-file-sha1-checked,radio/abl.img,c42084e3bfd17b31a770eaf4a9be74f2efbd616e)
 $(call add-radio-file-sha1-checked,radio/aop.img,60db2709983464ce8ebfa88056746eb736209d6b)
 $(call add-radio-file-sha1-checked,radio/bluetooth.img,db4d7a0452977f33aecee048042e1d885338f3e0)
@@ -23,5 +24,6 @@ $(call add-radio-file-sha1-checked,radio/tz.img,17822a5254c757c7a9bc569a8f2a0c79
 $(call add-radio-file-sha1-checked,radio/uefisecapp.img,75109f630a48f780acd2a6ab9f32b63bbcbca673)
 $(call add-radio-file-sha1-checked,radio/xbl.img,f8f43257dd05cb4f578daa4bfb2e994a7ef75841)
 $(call add-radio-file-sha1-checked,radio/xbl_config.img,650fa049d957858ad09465e035bd62ca81109c9a)
+endif
 
 endif
